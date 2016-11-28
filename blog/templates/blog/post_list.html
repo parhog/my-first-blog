@@ -1,0 +1,20 @@
+<html>
+	<head>
+        <title>Best blog</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="">My Blog</a></h1>
+        </div>
+
+{% for post in posts %}
+        <div>
+        		</br>
+            <p>published: {{ post.published_date }}</p>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post.tect }}</p>
+        </div>
+{% endfor %}
+
+    </body>
+</html>
