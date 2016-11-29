@@ -1,20 +1,12 @@
-<html>
-	<head>
-        <title>Best blog</title>
-    </head>
-    <body>
-        <div>
-            <h1><a href="">My Blog</a></h1>
-        </div>
+{% extends 'blog/base.html' %}
 
+{% block content %}
 {% for post in posts %}
-        <div>
-        		</br>
-            <p>published: {{ post.published_date }}</p>
-            <h2><a href="">{{ post.title }}</a></h2>
-            <p>{{ post.tect }}</p>
-        </div>
+	<div>
+		</br>
+		<p>published: {{ post.published_date }}</p>
+		<h1><a href="">{{ post.title }}</a></h2>
+		<p>{{ post.tect|linebreaksbr }}</p>
+	</div>
 {% endfor %}
-
-    </body>
-</html>
+{% endblock %}
